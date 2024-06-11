@@ -1,0 +1,14 @@
+const accountId = 144553
+let accountEmail = "raunakk@gmail.com"
+var accountPassword = "123456"
+accountCity = "Jabalpur"
+
+// accountId = 1445532
+
+
+
+accountEmail = "raunakk11@gmail.com"
+accountPassword = "12345678"
+accountCity = "Rewaa"
+let accountState;
+console.table([ accountId, accountEmail, accountPassword, accountCity, accountState]);
