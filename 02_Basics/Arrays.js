@@ -28,3 +28,7 @@ console.log(myn1);
 const myn2  = myArr.splice(1,3); //Both index inclusive and also it modfies the original array
 console.log(myn2);
 console.log(myn2);
+
+
+
+
