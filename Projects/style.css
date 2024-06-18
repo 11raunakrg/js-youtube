@@ -1,0 +1,12 @@
+h1 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.button {
+    height: 85px;
+    width: 40px;
+    border: 2px solid black;
+    text-align: center;
+    
+}
