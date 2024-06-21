@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body>
+    <h2>Random Images</h2>
+    <ul>
+        <img src="C:\Users\hp\Pictures\Screenshots" alt="Heyy" id="#image" width="300px" height="200px">
+    </ul>
+</body>
+<script>
+
+    // document.getElementById('kohli').onclick(() => {
+    //     alert('King Kohli :)');
+    // })
+
+    document.getElementById('owl').addEventListener('click',function(){
+        alert("heyy...");
+    },false);   ////false --> default
+
+    ///type, timestamp, defaultPrevented
+    ///target,toElement, srcElement, currTarget etc.
+    ///clientX, clientY, offset screenX screenY etc...
+    //altKEY, CtrlKey.....
+
+</script>
+
+
+</html>
