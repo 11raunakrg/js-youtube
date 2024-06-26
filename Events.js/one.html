@@ -1,30 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Events</title>
+    <title>Events</title>
 </head>
-<body>
-    <h2>Random Images</h2>
-    <ul>
-        <img src="C:\Users\hp\Pictures\Screenshots" alt="Heyy" id="#image" width="300px" height="200px">
-    </ul>
+
+<body style="background-color: whitesmoke">
+    <h2 style="margin-left: 43.5%; margin-top: 70px;">Amazing Images</h2>
+    <div>
+        <ul id="images" style="margin-left: 40%; margin-top: 0%;">
+            <li><img width="200px" id="virat" class="random" src="https://c.ndtvimg.com/2024-06/0fbqj86_sccs_625x300_24_June_24.jpg?im=FaceCrop,algorithm=dnn,width=806,height=605"
+                    alt="image"></li>
+            <li><img width="200px" id="rohit" class="random" src="https://c.ndtvimg.com/2024-06/gc91ttso_rohit-sharma_625x300_24_June_24.jpg?im=FeatureCrop,algorithm=dnn,width=806,height=605" alt=""></li>
+            <li><img width="200px" id="yuvraj" class="random" src="https://img.jagranjosh.com/imported/images/E/Articles/yujraj-singh-records.jpg" alt=""></li>
+            <li><img width="200px" id="abd" class="random" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyBzGZDxuj6L1N4kUH2tFEeva2CtdN4BqREg&s" alt=""></li>
+            <li><a href="https://www.google.com/" id="Google" target="_blank">Google</a></li>
+        </ul>
+    </div>
 </body>
+
 <script>
+    // document.querySelector('#abd').onclick = function() {
+    //     alert("abd clicked");
+    // }
 
-    // document.getElementById('kohli').onclick(() => {
-    //     alert('King Kohli :)');
+    // document.querySelector('#abd').addEventListener('click', ()=> {
+    //     alert('Abd17 Clicked');
     // })
+    // document.querySelector('#abd').addEventListener('click', function(e) {
+    //     console.log(e);
+    // },false) //false --> default
 
-    document.getElementById('owl').addEventListener('click',function(){
-        alert("heyy...");
-    },false);   ////false --> default
+    // document.querySelector('#images').addEventListener('click', () => {
+    //     console.log('clicked inside the ul');
+    // },false)
+                                                ///from bottom to top,i.e., first -> clicked on abd and then clicked inside the ul..
+    // document.querySelector('#abd').addEventListener('click', () => {
+    //     console.log('clicked on ABD');
+    // },false)
 
-    ///type, timestamp, defaultPrevented
-    ///target,toElement, srcElement, currTarget etc.
-    ///clientX, clientY, offset screenX screenY etc...
-    //altKEY, CtrlKey.....
+    // document.querySelector('#images').addEventListener('click', (e) => {
+    //     console.log('clicked inside the ul');
+    // },true)
+    //                                             ////from top to bottm i.e., clicked inside the ul and clicked on ABD
+    // document.querySelector('#abd').addEventListener('click', (e) => {
+    //     console.log('clicked on ABD');
+    //     e.stopPropagation();
+    // },true)
+
+    // document.querySelector('#Google').addEventListener('click', (e)=> {
+        
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     console.log("google clicked");       
+    // },false)
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        // console.log(e.target.parentNode);
+        if(e.target.tagName === 'IMG') {
+            let removeIt = e.target.parentNode;
+            removeIt.remove();
+        }
+        
+    }, false);
+
 
 </script>
 
